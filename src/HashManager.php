@@ -8,12 +8,12 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/hashing/blob/master/LICENSE
  */
-namespace HyperfExt\Hashing;
+namespace Hyperf\Hashing;
 
 use Hyperf\Contract\ConfigInterface;
-use HyperfExt\Hashing\Contract\DriverInterface;
-use HyperfExt\Hashing\Contract\HashInterface;
-use HyperfExt\Hashing\Driver\BcryptDriver;
+use Hyperf\Hashing\Contract\DriverInterface;
+use Hyperf\Hashing\Contract\HashInterface;
+use Hyperf\Hashing\Driver\BcryptDriver;
 use InvalidArgumentException;
 
 class HashManager implements HashInterface
@@ -28,7 +28,7 @@ class HashManager implements HashInterface
     /**
      * The array of created "drivers".
      *
-     * @var \HyperfExt\Hashing\Contract\DriverInterface[]
+     * @var \Hyperf\Hashing\Contract\DriverInterface[]
      */
     protected $drivers = [];
 

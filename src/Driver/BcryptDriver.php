@@ -8,9 +8,9 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/hashing/blob/master/LICENSE
  */
-namespace HyperfExt\Hashing\Driver;
+namespace Hyperf\Hashing\Driver;
 
-use HyperfExt\Hashing\Contract\DriverInterface;
+use Hyperf\Hashing\Contract\DriverInterface;
 use RuntimeException;
 
 class BcryptDriver extends AbstractDriver implements DriverInterface

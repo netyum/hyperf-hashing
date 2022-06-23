@@ -8,9 +8,9 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/hashing/blob/master/LICENSE
  */
-namespace HyperfExt\Hashing;
+namespace Hyperf\Hashing;
 
-use HyperfExt\Hashing\Contract\HashInterface;
+use Hyperf\Hashing\Contract\HashInterface;
 
 class ConfigProvider
 {

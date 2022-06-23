@@ -35,7 +35,7 @@ return [
         */
 
         'bcrypt' => [
-            'class' => \HyperfExt\Hashing\Driver\BcryptDriver::class,
+            'class' => \Hyperf\Hashing\Driver\BcryptDriver::class,
             'options' => [
                 'rounds' => env('BCRYPT_ROUNDS', 10),
             ],
@@ -53,7 +53,7 @@ return [
         */
 
         'argon2i' => [
-            'class' => \HyperfExt\Hashing\Driver\Argon2IDriver::class,
+            'class' => \Hyperf\Hashing\Driver\Argon2IDriver::class,
             'options' => [
                 'memory' => 1024,
                 'threads' => 2,
@@ -62,7 +62,7 @@ return [
         ],
 
         'argon2id' => [
-            'class' => \HyperfExt\Hashing\Driver\Argon2IdDriver::class,
+            'class' => \Hyperf\Hashing\Driver\Argon2IdDriver::class,
             'options' => [
                 'memory' => 1024,
                 'threads' => 2,
