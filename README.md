@@ -7,13 +7,13 @@
 ## 安装
 
 ```shell script
-composer require hyperf-ext/hashing
+composer require hyperf/hashing
 ```
 
 ## 发布配置
 
 ```shell script
-php bin/hyperf.php vendor:publish hyperf-ext/hashing
+php bin/hyperf.php vendor:publish hyperf/hashing
 ```
 
 > 配置文件位于 `config/autoload/hashing.php`。
@@ -29,17 +29,17 @@ return [
     'default' => 'bcrypt',
     'driver' => [
         'bcrypt' => [
-            'class' => \HyperfExt\Hashing\Driver\BcryptDriver::class,
+            'class' => \Hyperf\Hashing\Driver\BcryptDriver::class,
             'rounds' => env('BCRYPT_ROUNDS', 10),
         ],
         'argon' => [
-            'class' => \HyperfExt\Hashing\Driver\Argon2IDriver::class,
+            'class' => \Hyperf\Hashing\Driver\Argon2IDriver::class,
             'memory' => 1024,
             'threads' => 2,
             'time' => 2,
         ],
         'argon2id' => [
-            'class' => \HyperfExt\Hashing\Driver\Argon2IdDriver::class,
+            'class' => \Hyperf\Hashing\Driver\Argon2IdDriver::class,
             'memory' => 1024,
             'threads' => 2,
             'time' => 2,
@@ -54,7 +54,7 @@ return [
 
 ## 使用
 
-你可以通过 `\HyperfExt\Hashing\Hash` 类来加密你的密码：
+你可以通过 `\Hyperf\Hashing\Hash` 类来加密你的密码：
 
 ```php
 <?php
@@ -64,7 +64,7 @@ declare(strict_types=1);
 namespace App\Http\Controller;
 
 use Hyperf\HttpServer\Request;
-use HyperfExt\Hashing\Hash;
+use Hyperf\Hashing\Hash;
 
 class UpdatePasswordController
 {
@@ -132,4 +132,4 @@ $hasher->make('plain-text');
 
 ### 使用自定义哈希类
 
-实现 `\HyperfExt\Hashing\Contract\DriverInterface` 接口，并参照配置文件中的其他算法进行配置。
+实现 `\Hyperf\Hashing\Contract\DriverInterface` 接口，并参照配置文件中的其他算法进行配置。
